@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store Information — Dalitiwan Store IMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="about">
+  <div id="sidebarBackdrop" class="sidebar-backdrop" onclick="closeMobileSidebar()"></div>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-box">
+          <div class="brand-icon"><i class="fa-solid fa-store"></i></div>
+          <div>
+            <div class="brand-title">Dalitiwan Store</div>
+            <div class="brand-sub">Sari-Sari Inventory System</div>
+          </div>
+        </div>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main Navigation">
+        <div class="nav-section-label">System Menu</div>
+        <a href="index.html" class="nav-link "><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+<a href="products.html" class="nav-link "><i class="fa-solid fa-boxes-stacked"></i><span>Product Management</span></a>
+<a href="inventory.html" class="nav-link "><i class="fa-solid fa-arrows-rotate"></i><span>Inventory Management</span></a>
+<a href="reports.html" class="nav-link "><i class="fa-solid fa-chart-column"></i><span>Reports</span></a>
+<a href="about.html" class="nav-link active"><i class="fa-solid fa-store"></i><span>Store Information</span></a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="store-pill"><i class="fa-solid fa-location-dot"></i> Bakia, Majayjay, Laguna</div>
+        <div>Open Daily: <strong>6:00 AM – 9:00 PM</strong></div>
+        <div>Contact: Precy Carabuena</div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button type="button" class="hamburger-btn" onclick="toggleMobileSidebar()" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="page-title-wrap">
+            <h1>Store Information</h1>
+            <p>Business profile, hours, and contact details</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="hours-badge">
+            <i class="fa-regular fa-clock"></i>
+            <span>6:00 AM – 9:00 PM</span>
+          </div>
+          <button type="button" class="reset-demo-btn" onclick="resetSampleData()" title="Reset sample store items">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Reset Data</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-content">
+        
+<div class="info-grid">
+  <div class="card">
+    <div class="card-header">
+      <h3><i class="fa-solid fa-store" style="color:var(--primary);"></i> Store Background & Details</h3>
+    </div>
+    <div class="card-body">
+      <p style="margin-bottom:14px;color:var(--text-main);">
+        <strong>Dalitiwan Store</strong> is a neighborhood sari-sari store in <strong>Bakia, Majayjay, Laguna, Philippines</strong> serving daily household essentials, snacks, beverages, and staples to local families and passersby.
+      </p>
+      <div class="info-list-item">
+        <div class="info-list-icon"><i class="fa-solid fa-shop"></i></div>
+        <div>
+          <div style="font-weight:600;">Business Name & Type</div>
+          <div class="product-meta-text">Dalitiwan Store — Sari-Sari Store</div>
+        </div>
+      </div>
+      <div class="info-list-item">
+        <div class="info-list-icon"><i class="fa-solid fa-user-tie"></i></div>
+        <div>
+          <div style="font-weight:600;">Contact Person</div>
+          <div class="product-meta-text">Precy Carabuena</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3><i class="fa-solid fa-location-dot" style="color:var(--primary);"></i> Location & Operating Hours</h3>
+    </div>
+    <div class="card-body">
+      <div class="info-list-item">
+        <div class="info-list-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div>
+          <div style="font-weight:600;">Store Location</div>
+          <div class="product-meta-text">Bakia, Majayjay, Laguna, Philippines</div>
+        </div>
+      </div>
+      <div class="info-list-item">
+        <div class="info-list-icon"><i class="fa-regular fa-clock"></i></div>
+        <div>
+          <div style="font-weight:600;">Operating Hours</div>
+          <div class="product-meta-text">6:00 AM – 9:00 PM (Daily)</div>
+        </div>
+      </div>
+      <div class="info-list-item">
+        <div class="info-list-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <div>
+          <div style="font-weight:600;">System Mode</div>
+          <div class="product-meta-text">Static Frontend Inventory Management System (Browser LocalStorage)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </main>
+    </div>
+  </div>
+  
+<!-- Add / Edit Product Modal -->
+<div id="productModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="productModalTitle">Add New Product</h3>
+      <button type="button" class="modal-close" onclick="closeProductModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <form id="productForm" onsubmit="handleProductFormSubmit(event)">
+      <div class="modal-body">
+        <input type="hidden" id="editProductId" value="" />
+        <div class="form-group">
+          <label for="prodName">Product Name</label>
+          <input type="text" id="prodName" class="form-control" placeholder="e.g., Sardines, Well-Milled Rice (1 kg)" required />
+        </div>
+        <div class="form-group">
+          <label for="prodCategory">Category</label>
+          <select id="prodCategory" class="form-control" required>
+            <option value="Canned Goods">Canned Goods</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Snacks & Biscuits">Snacks & Biscuits</option>
+            <option value="Dairy & Eggs">Dairy & Eggs</option>
+            <option value="Noodles & Instant">Noodles & Instant</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Rice & Grains">Rice & Grains</option>
+          </select>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="form-group">
+            <label for="prodPrice">Price (₱)</label>
+            <input type="number" id="prodPrice" class="form-control" step="0.50" min="0" placeholder="0.00" required />
+          </div>
+          <div class="form-group">
+            <label for="prodQty">Quantity</label>
+            <input type="number" id="prodQty" class="form-control" min="0" placeholder="0" required />
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="form-group">
+            <label for="prodUnit">Unit Label</label>
+            <input type="text" id="prodUnit" class="form-control" placeholder="pc, pack, can, kg" value="pc" />
+          </div>
+          <div class="form-group">
+            <label for="prodReorder">Low Stock Alert Level</label>
+            <input type="number" id="prodReorder" class="form-control" min="1" value="10" required />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" onclick="closeProductModal()">Cancel</button>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> Save Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div id="deleteModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle">
+  <div class="modal-box" style="max-width:420px;">
+    <div class="modal-header">
+      <h3 id="deleteModalTitle" style="color:var(--danger);"><i class="fa-solid fa-triangle-exclamation"></i> Confirm Delete</h3>
+      <button type="button" class="modal-close" onclick="closeDeleteModal()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:14px;color:var(--text-main);">
+        Are you sure you want to remove <strong id="deleteProductLabel">this product</strong> from Dalitiwan Store's inventory list?
+      </p>
+      <p style="font-size:12.5px;color:var(--text-secondary);">
+        This action updates your local browser inventory records immediately.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" onclick="closeDeleteModal()">Cancel</button>
+      <button type="button" class="btn btn-danger-soft" onclick="confirmDeleteProduct()">
+        <i class="fa-solid fa-trash"></i> Yes, Delete
+      </button>
+    </div>
+  </div>
+</div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
